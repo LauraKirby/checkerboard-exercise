@@ -1,16 +1,33 @@
 // Your JS goes here
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color; 
+  }
+
 document.onload = function addElement(){
+	function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color; 
+  }
 	for (var i = 0; i < 99; i++){
 		if (i % 2 === 0){
 			var newDiv = document.createElement('div');
-			newDiv.style.backgroundColor = 'red';
+			newDiv.style.backgroundColor = getRandomColor();
   			newDiv.style.width = '11.1%';
   			newDiv.style.float = 'left';
   			newDiv.style.paddingBottom = '11.1%';
 			document.body.appendChild(newDiv);
 		}else {
 			var newDiv = document.createElement('div');
-			newDiv.style.backgroundColor = 'black';
+			newDiv.style.backgroundColor = getRandomColor();
   			newDiv.style.width = '11.1%';
   			newDiv.style.float = 'left';
   			newDiv.style.paddingBottom = '11.1%';
